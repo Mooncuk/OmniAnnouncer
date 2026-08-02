@@ -1,0 +1,15 @@
+name: OmniAnnouncer
+version: 1.0.0
+main: com.omniannouncer.OmniAnnouncer
+api-version: '1.20'
+folia-supported: true
+author: OmniAnnouncer
+description: Advanced multi-channel announcement plugin.
+softdepend: [PlaceholderAPI]
+
+commands:
+  omniannouncer:
+    description: Main command for OmniAnnouncer
+    permission: omniannouncer.admin
+    aliases: [announcement, duyuru]
+    usage: /omniannouncer [reload|broadcast]

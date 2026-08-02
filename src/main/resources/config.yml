@@ -1,0 +1,149 @@
+# ========================================================= #
+#               OMNIANNOUNCER CONFIGURATION                 #
+# ========================================================= #
+
+# General plugin settings
+settings:
+  auto-broadcaster-enabled: true   # Enable or disable automatic broadcast rotation
+  interval-seconds: 300            # Delay between broadcasts in seconds (300s = 5m)
+  broadcast-mode: "SEQUENCE"       # Broadcast selection mode: 'SEQUENCE' or 'RANDOM'
+
+# Plugin messages (Supports Hex/RGB colors and Minecraft color codes)
+messages:
+  no-permission: "&#FF3333You do not have permission to use this command!"
+  reload-success: "&#33FF88[OmniAnnouncer] Configuration reloaded successfully!"
+  usage: "&#FFCC00Usage: &#FFFFFF/duyuru reload &7or &#FFFFFF/duyuru broadcast <announcement_name>"
+  announcement-not-found: "&#FF3333No announcement found with that name!"
+
+# ========================================================= #
+#                AUTOMATIC ANNOUNCEMENTS LIST               #
+# ========================================================= #
+announcements:
+
+  # 1. EXAMPLE: Chat Announcement with Interactive Hover & Click Events
+  discord_chat:
+    enabled: true
+    type: "CHAT"                   # Types: CHAT, ACTIONBAR, TITLE, BOSSBAR, ALL
+    permission: ""                 # Permission required to see this broadcast (Leave empty for everyone)
+    worlds: []                     # Worlds where this broadcast is active (Empty list [] = all worlds)
+    sound:
+      enabled: true
+      name: "BLOCK_NOTE_BLOCK_PLING" # Spigot Sound Enum
+      volume: 1.0
+      pitch: 1.5
+    chat:
+      messages:
+        - "&#AA00FF&m----------------------------------------"
+        - "&#AA00FF&lDISCORD &f| &#55FF55Join Our Community!"
+        - "&7Chat with players, enter giveaways, and get support:"
+        - "&#55FF55&nhttps://discord.gg/yourserver"
+        - "&#AA00FF&m----------------------------------------"
+      hover-text: "&#55FF55Click to join our Discord server!"
+      click-action: "OPEN_URL"     # Options: OPEN_URL, RUN_COMMAND, SUGGEST_COMMAND
+      click-value: "https://discord.gg/yourserver"
+
+  # 2. EXAMPLE: On-Screen Title & Subtitle Announcement
+  vip_title:
+    enabled: true
+    type: "TITLE"
+    permission: ""
+    worlds: []
+    sound:
+      enabled: true
+      name: "ENTITY_EXPERIENCE_ORB_PICKUP"
+      volume: 1.0
+      pitch: 1.0
+    title:
+      title: "&#FFD700&lSPECIAL VIP SALE!"
+      subtitle: "&f20% discount available on our webstore now."
+      fade-in: 10                   # Duration in ticks (20 ticks = 1 second)
+      stay: 60                      # Duration in ticks
+      fade-out: 10                  # Duration in ticks
+
+  # 3. EXAMPLE: BossBar Announcement
+  store_bossbar:
+    enabled: true
+    type: "BOSSBAR"
+    permission: ""
+    worlds: []
+    sound:
+      enabled: false
+    bossbar:
+      title: "&#00FFFFLimited Time Sale Ending Soon! Visit store.yourserver.com"
+      color: "PURPLE"               # Colors: PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+      style: "SOLID"                # Styles: PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20
+      duration-seconds: 8
+
+  # 4. EXAMPLE: ActionBar Announcement (Above Hotbar)
+  rules_actionbar:
+    enabled: true
+    type: "ACTIONBAR"
+    permission: ""
+    worlds: []
+    sound:
+      enabled: true
+      name: "BLOCK_NOTE_BLOCK_HARP"
+      volume: 0.8
+      pitch: 1.0
+    actionbar:
+      message: "&#FF7700&lREMINDER: &fPlease respect server rules at all times!"
+
+  # 5. EXAMPLE: ALL-IN-ONE (Triggers Chat, Title, ActionBar & BossBar simultaneously)
+  event_all_in_one:
+    enabled: true
+    type: "ALL"
+    permission: ""
+    worlds: ["world", "world_nether"] # Restrict broadcast to specific worlds only
+    sound:
+      enabled: true
+      name: "UI_TOAST_CHALLENGE_COMPLETE"
+      volume: 1.0
+      pitch: 1.0
+    chat:
+      messages:
+        - "&#55FF55&m----------------------------------------"
+        - "&#55FF55&lMAJOR EVENT &f| &#AA00FFDrop Party Started!"
+        - "&7Teleport to the spawn area immediately!"
+        - "&#55FF55&m----------------------------------------"
+      hover-text: "&#AA00FFClick to teleport to Spawn!"
+      click-action: "RUN_COMMAND"
+      click-value: "/spawn"
+    title:
+      title: "&#55FF55&lDROP PARTY!"
+      subtitle: "&#AA00FFGo to spawn to collect rewards!"
+      fade-in: 10
+      stay: 70
+      fade-out: 20
+    actionbar:
+      message: "&#55FF55&lDROP PARTY IS LIVE AT SPAWN!"
+    bossbar:
+      title: "&#55FF55Drop Party in Progress at Spawn!"
+      color: "GREEN"
+      style: "PROGRESS"
+      duration-seconds: 15
+
+# ========================================================= #
+#              SCHEDULED / TIMED ANNOUNCEMENTS              #
+# ========================================================= #
+scheduled-announcements:
+
+  daily_event_schedule:
+    enabled: true
+    # Days: EVERYDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    day: "EVERYDAY"
+    # Time format: HH:mm (24-hour time format)
+    time: "20:00"
+    type: "TITLE"
+    permission: ""
+    worlds: []
+    sound:
+      enabled: true
+      name: "UI_TOAST_CHALLENGE_COMPLETE"
+      volume: 1.0
+      pitch: 1.0
+    title:
+      title: "&#00FF00&lDAILY EVENT STARTED!"
+      subtitle: "&#FFFF00Chests have been refreshed in the mining zone."
+      fade-in: 10
+      stay: 80
+      fade-out: 20

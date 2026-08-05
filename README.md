@@ -1,6 +1,6 @@
 # 📢 OmniAnnouncer
 
-[![Engine](https://img.shields.io/badge/Minecraft-1.20.6--1.26.2-brightgreen.svg)](https://papermc.io)
+[![Engine](https://img.shields.io/badge/Minecraft-1.20.6--26.2-brightgreen.svg)](https://papermc.io)
 [![Platform](https://img.shields.io/badge/Platform-Paper%20%7C%20Folia-blue.svg)](https://github.com/PaperMC/Folia)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 

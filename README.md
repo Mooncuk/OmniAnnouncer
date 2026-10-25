@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 📢 OmniAnnouncer
 
 [![Engine](https://img.shields.io/badge/Minecraft-1.20.6--26.2-brightgreen.svg)](https://papermc.io)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ========================================================= #
 #               OMNIANNOUNCER CONFIGURATION                 #
 # ========================================================= #
@@ -147,3 +148,114 @@ scheduled-announcements:
       fade-in: 10
       stay: 80
       fade-out: 20
+=======
+# ========================================================= #
+#                   OMNIANNOUNCER CONFIG                    #
+# ========================================================= #
+
+settings:
+  # Active language from plugins/OmniAnnouncer/languages/ (e.g., 'en', 'tr')
+  language: "en"
+  
+  # Timezone for scheduled announcements (ZoneId format)
+  timezone: "Europe/Istanbul"
+  
+  # Auto broadcaster settings
+  auto-broadcaster-enabled: true
+  interval-seconds: 300
+  broadcast-mode: "SEQUENCE" # 'SEQUENCE' or 'RANDOM'
+
+# ========================================================= #
+#                    ANNOUNCEMENTS LIST                     #
+#                                                           #
+#  TIPS & FORMATTING:                                       #
+#  - Colors: Standard codes (&a, &l, &n) and Hex (&#RRGGBB) #
+#  - Placeholders: Supports %player% (target name) and      #
+#    all PlaceholderAPI (PAPI) placeholders if installed.   #
+#  - Management: Set 'enabled: false' to disable any        #
+#    announcement without deleting its configuration.       #
+# ========================================================= #
+announcements:
+
+  # ---------------------------------------------------------
+  # 1. SIMPLE EXAMPLE (Quick & Minimal)
+  # NOTE: Remember to replace the Discord link with your own!
+  # ---------------------------------------------------------
+  simple_discord:
+    enabled: true
+    chat:
+      messages:
+        - "&#55FFFF&lDISCORD &8| &7Join our community: &#FFFFFFdiscord.gg/yourserver"
+      hover-text: "&#55FF55Click to join our server!"
+      click-action: "OPEN_URL"
+      click-value: "https://discord.gg/yourserver"
+
+  # ---------------------------------------------------------
+  # 2. FULL CUSTOMIZATION EXAMPLE (All Advanced Options)
+  # Use this as a reference template to customize every detail!
+  # ---------------------------------------------------------
+  advanced_custom_showcase:
+    enabled: false # Disabled by default (Example template)
+    
+    # [Targeting & Restrictions]
+    permission: "omniannouncer.vip"      # Permission requirement (Empty "" = visible to all)
+    worlds: ["world", "world_nether"]   # World restrictions (Empty [] = all worlds)
+    
+    # [Sound Customization]
+    sound:
+      name: "UI_TOAST_CHALLENGE_COMPLETE" # Bukkit Sound enum or minecraft:sound_key
+      volume: 1.0                         # Sound loudness (0.0 to 1.0)
+      pitch: 1.2                          # Sound pitch/tone (0.5 to 2.0)
+
+    # [Chat Channel]
+    chat:
+      messages:
+        - "&#FFaa00&m----------------------------------------"
+        - "&#FFaa00&lVIP SALE &8| &eSpecial Discounts for %player%!"
+        - "&7Visit our store now for &a20% off&7 all packages."
+        - "&#FFaa00&m----------------------------------------"
+      hover-text: "&#55FF55Click to open our webstore!"
+      click-action: "OPEN_URL"
+      click-value: "https://store.yourserver.com"
+
+    # [Title Channel - Optional Custom Durations]
+    title:
+      title: "&#FFD700&lSPECIAL SALE!"
+      subtitle: "&e20% discount on all ranks!"
+      fade-in: 20   # Ticks for fade-in transition (20 ticks = 1s, default: 10)
+      stay: 80      # Ticks to remain visible on screen (default: 60)
+      fade-out: 20  # Ticks for fade-out transition (default: 10)
+
+    # [ActionBar Channel]
+    actionbar:
+      message: "&#FFaa00★ &eDon't miss the 20% sale at &#FFAA00/store &e! &#FFaa00★"
+
+    # [BossBar Channel - Optional Custom Appearance]
+    bossbar:
+      title: "&#FF5555&lSALE ENDING SOON &8| &fVisit store.yourserver.com"
+      color: "YELLOW"        # PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE (default: PURPLE)
+      style: "NOTCHED_10"    # SOLID, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20 (default: SOLID)
+      duration-seconds: 12   # How many seconds the bar stays visible (default: 8)
+
+# ========================================================= #
+#              SCHEDULED / TIMED ANNOUNCEMENTS              #
+# ========================================================= #
+scheduled-announcements:
+
+  # Keep enabled: false until you configure your actual server event!
+  daily_mining_event:
+    enabled: false # Disabled by default to avoid broadcasting non-existent events
+    day: "EVERYDAY" # EVERYDAY or MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    time: "20:00"   # HH:mm (24-hour format) based on settings.timezone
+    sound:
+      name: "BLOCK_NOTE_BLOCK_BELL"
+      volume: 1.0
+      pitch: 1.0
+    title:
+      title: "&#55FF55&lEVENT STARTED!"
+      subtitle: "&eMining boost is now active for 1 hour!"
+      stay: 70
+    chat:
+      messages:
+        - "&#55FF55&l[EVENT] &eDaily mining boost has started! Happy mining!"
+>>>>>>> e5a1b90 (chore: release v1.1.0 - Kyori Adventure, I18n and Folia scheduler support)

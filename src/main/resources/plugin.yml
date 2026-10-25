@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: OmniAnnouncer
 version: 1.0.0
 main: com.omniannouncer.OmniAnnouncer
@@ -13,3 +14,28 @@ commands:
     permission: omniannouncer.admin
     aliases: [announcement, duyuru]
     usage: /omniannouncer [reload|broadcast]
+=======
+name: OmniAnnouncer
+version: 1.1.0
+main: com.omniannouncer.OmniAnnouncer
+api-version: '1.21'
+folia-supported: true
+author: Mooncuk
+website: https://github.com/Mooncuk/OmniAnnouncer
+description: Advanced multi-channel announcement plugin.
+softdepend: [PlaceholderAPI]
+
+commands:
+  announcement:
+    description: Main command for OmniAnnouncer
+    aliases: [announce, omniannounce, duyuru]
+    usage: /<command> <reload|announce|send|preview|list|help>
+
+permissions:
+  omniannouncer.admin:
+    description: Tüm OmniAnnouncer komutlarını yönetme yetkisi
+    default: op
+  omniannouncer.reload:
+    description: Eklenti konfigürasyonunu yenileme yetkisi
+    default: op
+>>>>>>> e5a1b90 (chore: release v1.1.0 - Kyori Adventure, I18n and Folia scheduler support)

@@ -1,0 +1,28 @@
+# ========================================================= #
+#            OMNIANNOUNCER - ENGLISH LANGUAGE FILE          #
+# ========================================================= #
+
+messages:
+  no-permission: "&#FF3333You do not have permission to use this command!"
+  reload-success: "&#33FF88[OmniAnnouncer] Configuration and languages reloaded successfully!"
+  usage: "&#FFCC00Usage: &#FFFFFF/%label% <reload|announce|send|preview|list|help>"
+  announcement-not-found: "&#FF3333No announcement found with the name '%name%'!"
+  announcement-disabled: "&#FF3333The announcement '%name%' is currently disabled!"
+  broadcast-success: "&#33FF88[OmniAnnouncer] Announcement '%name%' has been broadcasted successfully."
+  send-success: "&#33FF88[OmniAnnouncer] Announcement '%name%' has been sent to %player%."
+  preview-success: "&#33FF88[OmniAnnouncer] Previewing announcement '%name%'."
+  player-not-found: "&#FF3333Player not found: %player%"
+  player-only: "&#FF3333This command can only be used by players!"
+  list-header: "&#FFCC00OmniAnnouncer Announcements:"
+  list-entry: "&#FFFFFF- %name% &7[%status%]"
+  list-active: "&aActive"
+  list-disabled: "&cDisabled"
+  list-empty: "&#FFCC00There are no announcements configured yet."
+  help:
+    - "&#FFCC00OmniAnnouncer Commands:"
+    - "&#FFFFFF/%label% help &7- Displays this help menu."
+    - "&#FFFFFF/%label% list &7- Lists all announcements and their status."
+    - "&#FFFFFF/%label% announce <name> &7- Broadcasts an announcement to the server."
+    - "&#FFFFFF/%label% send <player> <name> &7- Sends an announcement only to the specified player."
+    - "&#FFFFFF/%label% preview <name> &7- Previews an announcement on your screen only."
+    - "&#FFFFFF/%label% reload &7- Reloads configuration and language files."

@@ -1,0 +1,28 @@
+# ========================================================= #
+#            OMNIANNOUNCER - TÜRKÇE DİL DOSYASI             #
+# ========================================================= #
+
+messages:
+  no-permission: "&#FF3333Bu komutu kullanma yetkiniz yok!"
+  reload-success: "&#33FF88[OmniAnnouncer] Konfigürasyon ve dil dosyaları başarıyla yenilendi!"
+  usage: "&#FFCC00Kullanım: &#FFFFFF/%label% <reload|announce|send|preview|list|help>"
+  announcement-not-found: "&#FF3333'%name%' adında bir duyuru bulunamadı!"
+  announcement-disabled: "&#FF3333'%name%' duyurusu şu anda devre dışı!"
+  broadcast-success: "&#33FF88[OmniAnnouncer] '%name%' duyurusu başarıyla yayınlandı."
+  send-success: "&#33FF88[OmniAnnouncer] '%name%' duyurusu %player% oyuncusuna gönderildi."
+  preview-success: "&#33FF88[OmniAnnouncer] '%name%' duyurusu önizlendi."
+  player-not-found: "&#FF3333Oyuncu bulunamadı: %player%"
+  player-only: "&#FF3333Bu komut sadece oyuncular tarafından kullanılabilir!"
+  list-header: "&#FFCC00OmniAnnouncer Duyuruları:"
+  list-entry: "&#FFFFFF- %name% &7[%status%]"
+  list-active: "&aAktif"
+  list-disabled: "&cDevre Dışı"
+  list-empty: "&#FFCC00Henüz tanımlanmış bir duyuru yok."
+  help:
+    - "&#FFCC00OmniAnnouncer Komutları:"
+    - "&#FFFFFF/%label% help &7- Bu yardım menüsünü gösterir."
+    - "&#FFFFFF/%label% list &7- Tüm duyuruları ve durumlarını listeler."
+    - "&#FFFFFF/%label% announce <duyuru> &7- Duyuruyu sunucuya yayınlar."
+    - "&#FFFFFF/%label% send <oyuncu> <duyuru> &7- Duyuruyu sadece o oyuncuya gönderir."
+    - "&#FFFFFF/%label% preview <duyuru> &7- Duyuruyu sadece kendi ekranınızda önizler."
+    - "&#FFFFFF/%label% reload &7- Konfigürasyon ve dil dosyalarını yeniler."

@@ -6,7 +6,11 @@
 
     <groupId>com.omniannouncer</groupId>
     <artifactId>OmniAnnouncer</artifactId>
+<<<<<<< HEAD
     <version>1.0.0</version>
+=======
+    <version>1.1.0</version>
+>>>>>>> e5a1b90 (chore: release v1.1.0 - Kyori Adventure, I18n and Folia scheduler support)
     <packaging>jar</packaging>
 
     <name>OmniAnnouncer</name>
@@ -19,8 +23,13 @@
 
     <repositories>
         <repository>
+<<<<<<< HEAD
             <id>spigotmc-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+=======
+            <id>papermc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
+>>>>>>> e5a1b90 (chore: release v1.1.0 - Kyori Adventure, I18n and Folia scheduler support)
         </repository>
         <repository>
             <id>placeholderapi</id>
@@ -30,9 +39,15 @@
 
     <dependencies>
         <dependency>
+<<<<<<< HEAD
             <groupId>dev.folia</groupId>
             <artifactId>folia-api</artifactId>
             <version>1.20.6-R0.1-SNAPSHOT</version>
+=======
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.21.1-R0.1-SNAPSHOT</version>
+>>>>>>> e5a1b90 (chore: release v1.1.0 - Kyori Adventure, I18n and Folia scheduler support)
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -44,14 +59,24 @@
     </dependencies>
 
     <build>
+<<<<<<< HEAD
+=======
+        <finalName>OmniAnnouncer-${project.version}</finalName>
+>>>>>>> e5a1b90 (chore: release v1.1.0 - Kyori Adventure, I18n and Folia scheduler support)
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+<<<<<<< HEAD
                 <version>3.11.0</version>
                 <configuration>
                     <source>21</source>
                     <target>21</target>
+=======
+                <version>3.13.0</version>
+                <configuration>
+                    <release>${java.version}</release>
+>>>>>>> e5a1b90 (chore: release v1.1.0 - Kyori Adventure, I18n and Folia scheduler support)
                 </configuration>
             </plugin>
         </plugins>
@@ -62,4 +87,8 @@
             </resource>
         </resources>
     </build>
+<<<<<<< HEAD
 </project>
+=======
+</project>
+>>>>>>> e5a1b90 (chore: release v1.1.0 - Kyori Adventure, I18n and Folia scheduler support)
